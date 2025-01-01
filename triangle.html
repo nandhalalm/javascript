@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Type Checker</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt('Please input the first side (a)'));
+        let b = parseFloat(prompt('Please input the second side (b)'));
+        let c = parseFloat(prompt('Please input the third side (c)'));
+
+        // Check if all sides are positive
+        if (a > 0 && b > 0 && c > 0) {
+            if (a === b && b === c) {
+                console.log("Equilateral triangle");
+            } else if (a === b || b === c || c === a) {
+                console.log("Isosceles triangle");
+            } else {
+                console.log("Scalene triangle");
+            }
+        } else {
+            console.log("All sides must be positive numbers.");
+        }
+    </script>
+</body>
+</html>
