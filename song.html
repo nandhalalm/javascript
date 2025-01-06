@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playlist Manager</title>
+</head>
+<body>
+  <h1>Playlist Manager</h1>
+  <script>
+    let playlist = ["Song A", "Song B", "Song C", "Song D", "Song E"];
+
+    playlist.push("Song F");
+    console.log("After adding a new song:", playlist);
+
+    playlist.splice(2, 1); 
+    console.log("After removing a song:", playlist);
+
+    console.log("Length of playlist:", playlist.length);
+
+    console.log("First song:", playlist[0]);
+    console.log("Last song:", playlist[playlist.length - 1]);
+
+    let playlistString = playlist.join(", ");
+    console.log("Playlist as a string:", playlistString);
+
+    let newSongs = ["Song G", "Song H", "Song I"];
+    let combinedPlaylist = playlist.concat(newSongs);
+    console.log("Combined playlist:", combinedPlaylist);
+
+    let nestedPlaylist = [["Song J", "Song K"], ["Song L"], ["Song M", "Song N"]];
+    let flatPlaylist = nestedPlaylist.flat();
+    console.log("Flattened playlist:", flatPlaylist);
+
+    playlist.splice(2, 2, "Song X", "Song Y");
+    console.log("After replacing songs:", playlist);
+
+    playlist.sort();
+    console.log("Alphabetically sorted playlist:", playlist);
+
+    let firstTwoSongs = playlist.slice(0, 2);
+    playlist = playlist.concat(firstTwoSongs);
+    console.log("After copying first two songs to the end:", playlist);
+  </script>
+</body>
+</html>
