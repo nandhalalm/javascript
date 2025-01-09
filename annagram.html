@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Anagrams</title>
+    <script>
+        function isAnagram(word1, word2) {
+            return word1.split('').sort().join('') === word2.split('').sort().join('');
+        }
+
+        const word1 = prompt("Enter the first word:");
+        const word2 = prompt("Enter the second word:");
+        const result = isAnagram(word1, word2);
+
+        document.write("the annagram is ",result);
+    </script>
+</head>
+<body>
+</body>
+</html>

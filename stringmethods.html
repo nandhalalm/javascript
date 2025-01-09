@@ -7,29 +7,28 @@
 </head>
 <body>
     <script>
-      
-        const text = " JavaScript is Awesome! ";
+        const text = "JavaScript is Awesome!";
 
-        console.log(" Length of the string:", text.length);
-        console.log(" Character at index 5:", text.charAt(5));
-        console.log(" Unicode value of the character at index 5:", text.charCodeAt(5));
-        console.log(" Last character of the string:", text.charAt(text.length - 1));
-        console.log(" Character at index 3:", text.charAt(3));
-        console.log(" Extract the word 'Script':", text.slice(5, 11));
-        console.log(" Extract the word 'Awesome':", text.slice(15, 22).trim());
-        console.log(" Extract 'JavaScript':", text.slice(1, 11));
-        console.log(" String in uppercase:", text.toUpperCase());
-        console.log(" String in lowercase:", text.toLowerCase());
-        console.log("11. Concatenate ' Let's Learn!':", text.concat(" Let's Learn!"));
-        console.log("12. Remove spaces from both ends:", text.trim());
-        console.log("13. Remove spaces from the beginning:", text.trimStart());
-        console.log("14. Remove spaces from the end:", text.trimEnd());
-        console.log("15. Add * padding at the start to make total length 25:", text.padStart(25, '*'));
-        console.log("16. Add - padding at the end to make total length 25:", text.padEnd(25, '-'));
-        console.log("17. Repeat the string 2 times:", text.repeat(2));
-        console.log("18. Replace 'Awesome' with 'Cool':", text.replace("Awesome", "Cool"));
-        console.log("19. Replace all spaces with '-':", text.replace(/ /g, "-"));
-        console.log("20. Convert the string into an array of words:", text.trim().split(" "));
+        document.write(" Length of the string:", text.length, "<br>");
+        document.write(" Character at index 5:", text.charAt(5), "<br>");
+        document.write(" Unicode value of the character at index 5:", text.charCodeAt(5), "<br>");
+        document.write(" Last character of the string:", text.charAt(text.length - 1), "<br>");
+        document.write(" Character at index 3:", text.charAt(3), "<br>");
+        document.write(" Extract the word 'Script':", text.slice(5, 11), "<br>");
+        document.write(" Extract the word 'Awesome':", text.slice(15, 22).trim(), "<br>");
+        document.write(" Extract 'JavaScript':", text.slice(1, 11), "<br>");
+        document.write(" String in uppercase:", text.toUpperCase(), "<br>");
+        document.write(" String in lowercase:", text.toLowerCase(), "<br>");
+        document.write(" Concatenate ' Let's Learn!':", text.concat(" Let's Learn!"), "<br>");
+        document.write(" Remove spaces from both ends:", text.trim(), "<br>");
+        document.write(" Remove spaces from the beginning:", text.trimStart(), "<br>");
+        document.write(" Remove spaces from the end:", text.trimEnd(), "<br>");
+        document.write(" Add * padding at the start to make total length 25:", text.padStart(25, '*'), "<br>");
+        document.write(" Add - padding at the end to make total length 25:", text.padEnd(25, '-'), "<br>");
+        document.write(" Repeat the string 2 times:", text.repeat(2), "<br>");
+        document.write(" Replace 'Awesome' with 'Cool':", text.replace("Awesome", "Cool"), "<br>");
+        document.write(" Replace all spaces with '-':", text.replace(/ /g, "-"), "<br>");
+        document.write(" Convert the string into an array of words:", text.trim().split(" "), "<br>");
     </script>
 </body>
 </html>

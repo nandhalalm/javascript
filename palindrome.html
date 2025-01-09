@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(word) {
+            const reversed = word.split('').reverse().join('');
+            return word === reversed;
+        }
+
+        const word = prompt("Enter a word:");
+        const result = isPalindrome(word);
+        
+        if(result==word)
+        {
+            document.write("is pallindrome");
+        }
+        else
+        {
+            document.write("is not  pallindrome");  
+        }
+    </script>
+</body>
+</html>
