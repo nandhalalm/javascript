@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var text="The rain in SPAIN stays mainly in the plain";
+        var arr=text.split(" ");
+        document.write("the original string:",arr.join(','));
+
+        var count=0;
+        for(var i=0;i<arr.length;i++)
+        {
+            if(arr[i].toLowerCase().includes('e'))
+            {
+                count++;
+            }
+        }
+        document.write("<br>"+"the count: ",+count);
+    </script>
+</body>
+</html>

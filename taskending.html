@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var text="The rain in SPAIN stays mainly in the plain";
+        var arr=text.split(" ");
+        document.write("the original array:"+arr.join(',')+"<br>");
+        var output=[];
+        for(var x=0;x<arr.length;x++)
+        {
+            if(arr[x].length==5)
+            {
+                output.push(arr[x]);
+            }
+        }
+        document.write("the output:",output);
+    </script>
+</body>
+</html>

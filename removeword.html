@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remove a Word</title>
+</head>
+<body>
+  <h1>Remove a Word</h1>
+  <button onclick="removeWord()">Start</button>
+
+  <script>
+    function findDuplicateWords(arr) {
+        const wordCounts = {};
+        const duplicates = [];
+         
+        for (let i = 0; i < arr.length; i++) {
+            const word = arr[i];
+            if (wordCounts[word]) {
+                wordCounts[word] += 1;
+            } else {
+                wordCounts[word] = 1; 
+            }
+        }
+
+
+        for (const word in wordCounts) {
+            if (wordCounts[word] > 1) {
+            duplicates.push(word);
+            }
+        }
+
+        return duplicates;
+    }
+
+    const words = ["hello", "world", "hello", "goodbye", "world"];
+    const duplicateWords = findDuplicateWords(words);
+
+    document.write(" the duplicates are :",duplicateWords);
+
+</script>
+</body>
+</html>

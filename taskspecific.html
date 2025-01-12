@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var words=["hello","sian","nandu","wild","world"];
+        var len=words.length;
+        var find=prompt("Enter the word to find:");
+        var x;
+
+        for(x=0;x<len;x++)
+        {
+            if(words[x]==find)
+            {
+                words.splice(x,1);
+                x--;
+                break;
+            }
+        }
+        document.write("remaining words in the array: ",words);
+    </script>
+</body>
+</html>
