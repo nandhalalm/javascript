@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sort Words Alphabetically</title>
+</head>
+<body>
+  <h1>Sort Words Alphabetically</h1>
+  <input id="wordsInput" type="text" placeholder="Enter words separated by spaces">
+  <button onclick="sortWords()">Sort</button>
+  <p id="output"></p>
+
+  <script>
+    function sortWords() {
+      let words = document.getElementById('wordsInput').value.split(' ');
+      for (let i = 0; i < words.length; i++) {
+        for (let j = i + 1; j < words.length; j++) {
+          if (words[i].toLowerCase() > words[j].toLowerCase()) {
+            [words[i], words[j]] = [words[j], words[i]];
+          }
+        }
+      }
+      document.getElementById('output').textContent = words.join(' ');
+    }
+  </script>
+</body>
+</html>

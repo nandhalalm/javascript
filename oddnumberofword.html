@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count Odd Words</title>
+</head>
+<body>
+  <h1>Count Words with Odd Number of Letters</h1>
+  <input id="wordsInput" type="text" placeholder="Enter words here">
+  <button onclick="countOddWords()">Count</button>
+  <p id="output"></p>
+
+  <script>
+    function countOddWords() {
+      var words = document.getElementById('wordsInput').value.split(' ');
+      var oddCount = 0;
+
+      for (var i = 0; i < words.length; i++) {
+        if (words[i].length % 2 !== 0) {
+          oddCount++;
+        }
+      }
+
+      document.getElementById('output').textContent = "Odd words: " + oddCount;
+    }
+  </script>
+</body>
+</html>
