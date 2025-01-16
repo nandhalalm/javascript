@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p><br>
+    <p id="demon"></p>
+    <script>
+        const students = [
+                        { name: "Alice", score: 95, subject: "Math" },
+                        { name: "Bob", score: 67, subject: "Science" },
+                        { name: "Charlie", score: 82, subject: "English" },
+                        { name: "David", score: 74, subject: "History" },
+                        { name: "Eve", score: 58, subject: "Art" },
+                        { name: "Frank", score: 89, subject: "Physics" },
+                        { name: "Grace", score: 91, subject: "Biology" },
+                    ]
+                    const filtered = students.filter(student => student.score > 70);
+                    console.log("Students Scoring Above 70:", filtered);
+    document.getElementById("demo").innerHTML=JSON.stringify(filtered);   
+    
+    //map1
+
+    const grades=students.map(student=>{
+        let grade;
+        if(student.score>=90){
+            grade='A' ;
+        }
+        else if(student.score>=80){
+            grade='B' ;
+        }
+        else if(student.score>=70){
+            grade='C' ;
+        }
+        else if(student.score>=60){
+            grade='D' ;
+        }
+        else{
+            grade='FAIL';
+        }
+        return{...student,grade};
+    });
+    console.log(grades);
+    document.getElementById("demon").innerHTML=JSON.stringify(grades); 
+
+    //totalscore
+    const totalScore = students.reduce((total, student) => total + student.score, 0);
+    console.log("Total Score of All Students:", totalScore);
+    
+    //averagescore
+    const averagescore=totalScore/students.length;
+    console.log("average Score of All Students:", averagescore);
+
+    //aboveaverage
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript DOM Manipulation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">Welcome</h1>
+  <img id="carImage" src="1.jpg" alt="Car Image" width="300">
+  <p id="description">This is a demo paragraph.</p>
+
+  <script>
+    document.getElementById("carImage").src = "car.jpg";
+
+    const title = document.getElementById("title");
+    title.style.color = "green";
+    title.style.backgroundColor = "yellow";
+
+    const description = document.getElementById("description");
+    description.style.fontSize = "20px";
+    description.textContent = "JavaScript DOM Manipulation!";
+    
+  </script>
+</body>
+</html>

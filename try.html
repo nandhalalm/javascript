@@ -9,6 +9,7 @@
     <h2>JavaScript in Body</h2>
 
 <p id="demo"></p>
+<p id="demon"></p>
     <script>
         document.getElementById("demo").innerHTML = "My First JavaScript";
         document.getElementById("demo").innerHTML = "javascript is super";
@@ -24,9 +25,19 @@
         document.write(" Remove spaces from both ends:", text.trim(), "<br>");
         document.write("the word after trim <br>",text.trimStart());
 
+        const students = [
+                        { name: "Alice", score: 95, subject: "Math" },
+                        { name: "Bob", score: 67, subject: "Science" },
+                        { name: "Charlie", score: 82, subject: "English" },
+                        { name: "David", score: 74, subject: "History" },
+                        { name: "Eve", score: 58, subject: "Art" },
+                        { name: "Frank", score: 89, subject: "Physics" },
+                        { name: "Grace", score: 91, subject: "Biology" },
+                    ]
+        const filtered = students.filter(student => student.score>70);
+        console.log("the filtered array is",filtered);
         
-
-        
+       
 
     </script>
 </body>
