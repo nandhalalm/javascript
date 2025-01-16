@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <input type="text" name="" id="num1" placeholder="Enter first number">
+    <input type="text" name="" id="num2" placeholder="Enter second number">
+    <h2 id="result"></h2>
+    <button style="background-color: aqua;" onclick="calculate('add')">+</button>
+    <button style="background-color: aqua;" onclick="calculate('sub')">-</button>
+    <button style="background-color: aqua;" onclick="calculate('multi')">*</button>
+    <button style="background-color: aqua;" onclick="calculate('divide')">/</button>
+    <script>
+        let calculate = (x) => {
+            let result;
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                window.alert("Please enter valid numbers");
+                return; 
+            }
+
+            if (x === 'add') {
+                result = num1 + num2;
+            } else if (x === 'sub') {
+                result = num1 - num2;
+            } else if (x === 'multi') {
+                result = num1 * num2;
+            } else if (x === 'divide') {
+                if (num2 === 0) {
+                    window.alert("Cannot divide by zero");
+                    return; 
+                }
+                result = num1 / num2;
+            }
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>
